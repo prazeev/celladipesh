@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "categories",
+  "info": {
+    "name": "categories",
+    "description": "Categories"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "default": "",
+      "type": "string"
+    },
+    "Slug": {
+      "default": "",
+      "type": "string"
+    },
+    "Description": {
+      "default": "",
+      "type": "text"
+    },
+    "ads": {
+      "collection": "ads",
+      "via": "categories"
+    },
+    "user": {
+      "model": "user",
+      "via": "categories",
+      "plugin": "users-permissions"
+    },
+    "Status": {
+      "default": false,
+      "type": "boolean"
+    },
+    "Type": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "connection": "default",
+  "collectionName": "ads",
+  "info": {
+    "name": "ads",
+    "description": "Advertizement"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "default": "",
+      "type": "string"
+    },
+    "categories": {
+      "model": "categories",
+      "via": "ads"
+    },
+    "Photos": {
+      "default": "",
+      "type": "string"
+    },
+    "Description": {
+      "default": "",
+      "type": "text"
+    },
+    "Phone": {
+      "default": "",
+      "type": "string"
+    },
+    "Email": {
+      "default": "",
+      "type": "email"
+    },
+    "Premium": {
+      "default": false,
+      "type": "boolean"
+    },
+    "Expireson": {
+      "default": "",
+      "type": "date"
+    },
+    "user": {
+      "model": "user",
+      "via": "ads",
+      "plugin": "users-permissions"
+    },
+    "Status": {
+      "default": false,
+      "type": "boolean"
+    }
+  }
+}
